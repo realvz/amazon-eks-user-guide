@@ -21,7 +21,7 @@ If you have a macOS or Linux system with `curl`, `tar`, `gzip`, and the `jq` JSO
    curl -Ls $DOWNLOAD_URL -o metrics-server-$DOWNLOAD_VERSION.tar.gz
    mkdir metrics-server-$DOWNLOAD_VERSION
    tar -xzf metrics-server-$DOWNLOAD_VERSION.tar.gz --directory metrics-server-$DOWNLOAD_VERSION --strip-components 1
-   kubectl apply -f metrics-server-$DOWNLOAD_VERSION/deploy/1.8+/
+   kubectl apply -f metrics-server-$DOWNLOAD_VERSION/deploy/kubernetes/
    ```
 
 1. Verify that the `metrics-server` deployment is running the desired number of pods with the following command\.
@@ -58,10 +58,10 @@ If you are downloading to a remote server, you can use the following `wget` comm
       tar -xzf v0.3.6.tar.gz
       ```
 
-1. Apply all of the YAML manifests in the `metrics-server-0.3.6/deploy/1.8+` directory \(substituting your release version\)\.
+1. Apply all of the YAML manifests in the `metrics-server-0.3.6/deploy/kubernetes` directory \(substituting your release version\)\.
 
    ```
-   kubectl apply -f metrics-server-0.3.6/deploy/1.8+/
+   kubectl apply -f metrics-server-0.3.6/deploy/kubernetes/
    ```
 
 1. Verify that the `metrics-server` deployment is running the desired number of pods with the following command\.
